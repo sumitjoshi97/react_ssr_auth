@@ -1,0 +1,45 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add react react-dom axios babel-cli babel-core babel-loader babel-preset-env babel-preset-react babel-preset-stage-0 babel-preset-es2015 babel-preset-es2017 compression concurrently express lodash npm-run-all react-helmet react-redux react-router-config react-router-dom redux redux-thunk serialize-javascript webpack webpack-dev-server webpack-node-essentials
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_602662296:/mnt/c/Program Files (x86)/Intel/iCLS Client:/mnt/c/Program Files/Intel/iCLS Client:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Microsoft DNX/Dnvm:/mnt/d/Program Files/nodejs:/mnt/d/Program Files (x86)/Yarn/bin:/mnt/c/Program Files/Common Files/Autodesk Shared:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/dotnet:/mnt/c/Users/Sumit/AppData/Local/Microsoft/WindowsApps:/mnt/d/Program Files/Microsoft VS Code/bin:/mnt/c/Users/Sumit/AppData/Roaming/npm:/mnt/c/Users/Sumit/AppData/Local/Yarn/bin:/mnt/d/Program Files/WinRAR:/mnt/c/Users/Sumit/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Sumit/AppData/Local/hyper/app-2.0.0/resources/bin:/mnt/c/Program Files/heroku/bin:/mnt/d/Program Files/Android/sdk/platform-tools/adb.exe:/snap/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  10.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/webpack-node-essentials: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:64202:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:137468:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:138440:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:138362:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1092:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "ssr-auth",
+    "version": "1.0.0",
+    "description": "basic auth app with react server-side-rendering",
+    "main": "index.js",
+    "repository": "https://github.com/sumitjoshi97/react_ssr_auth.git",
+    "author": "Sj",
+    "license": "MIT",
+    "private": false
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
