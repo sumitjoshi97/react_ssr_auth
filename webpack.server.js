@@ -23,18 +23,19 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: [
-            'react',
-            'stage-0',
-            'es2015',
-            'es2017',
+            '@babel/react',
             [
-              'env',
+              '@babel/env',
               {
                 targets: {
                   browsers: ['last 2 versions']
                 }
               }
             ]
+          ],
+          plugins: [
+            // Stage 0 preset upgrade for babel-7
+            '@babel/plugin-proposal-function-bind'
           ]
         }
       }
