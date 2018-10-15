@@ -1,6 +1,10 @@
 const path = require('path')
+const merge = require('webpack-merge')
+const webpackNodeExternals = require('webpack-node-externals')
 
-module.exports = {
+const baseConfig = require('./webpack.base')
+
+const config = {
   //   inform webpack that we are building a bundle for node js
   //   rather than for the browser
   target: 'node',
@@ -14,31 +18,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build')
   },
 
-  //   tell webpack to run babel to transform jsx to js
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          presets: [
-            '@babel/react',
-            [
-              '@babel/env',
-              {
-                targets: {
-                  browsers: ['last 2 versions']
-                }
-              }
-            ]
-          ],
-          plugins: [
-            // Stage 0 preset upgrade for babel-7
-            '@babel/plugin-proposal-function-bind'
-          ]
-        }
-      }
-    ]
-  }
+  externals: [webpackNodeExternals()]
 }
+
+module.exports = merge(baseConfig, config)
