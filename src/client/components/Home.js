@@ -4,7 +4,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        Home Component
+        Home Component updated
+        <button onClick={() => console.log('pressed')}>Press me</button>
       </div>
     )
   }
