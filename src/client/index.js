@@ -1,7 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-// importing components
-import Home from './components/Home'
+// import redux libraries
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
 
-ReactDOM.hydrate(<Home/>, document.getElementById('root'))
+// import routes
+import Routes from './Routes'
+
+const store = createStore(reducers, {}, applyMiddleware(thunk))
+
+const app = (
+  <Provider store={store}>
+    <Router>
+      <Routes />
+    </Router>
+  </Provider>
+)
+
+ReactDOM.hydrate(app, document.getElementById('root'))
