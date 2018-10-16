@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchUsers } from '../actions'
+import createStore from '../store/store'
+
+const store = createStore()
 
 class UsersList extends Component {
   componentDidMount() {
@@ -12,8 +15,6 @@ class UsersList extends Component {
   }
 
   render() {
-    console.log('users list')
-    console.log(this.props)
     return <div>{this.renderUsers()}</div>
   }
 }
@@ -21,6 +22,10 @@ class UsersList extends Component {
 const mapStateToProps = state => ({
   users: state.users
 })
+
+export const loadData = () => {
+  store.dispatch(fetchUsers())
+}
 
 export default connect(
   mapStateToProps,
