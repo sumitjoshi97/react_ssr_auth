@@ -10,6 +10,9 @@ import { Provider } from 'react-redux'
 // import routes
 import Routes from './Routes'
 
+// import reduxer
+import reducers from './reducers'
+
 const store = createStore(reducers, {}, applyMiddleware(thunk))
 
 const app = (
