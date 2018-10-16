@@ -1,9 +1,6 @@
-import React from 'react'
-import { Route } from 'react-router-dom'
-
 // import components
-import Home from './components/Home'
-import UsersList, {loadData} from './components/UsersList'
+import Home from './pages/HomePage'
+import UsersList, {loadData} from './pages/UsersListPage'
 
 export default [
   {
