@@ -21,7 +21,8 @@ module.exports = {
           ],
           plugins: [
             // Stage 0 preset upgrade for babel-7
-            '@babel/plugin-proposal-function-bind'
+            '@babel/plugin-proposal-function-bind',
+            '@babel/plugin-proposal-class-properties'
           ]
         }
       }
