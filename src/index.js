@@ -1,13 +1,14 @@
+import 'babel-polyfill'
 import express from 'express'
 import renderer from './render'
-import store from './client/store/store'
+import createStore from './client/store/store'
 
 const app = express()
 
 app.use(express.static('public'))
 
 app.get('*', (req, res) => {
-  const store = store()
+  const store = createStore()
 
   //initialize and load data into store
 
