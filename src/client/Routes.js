@@ -1,16 +1,21 @@
 // import components
+import App from './App'
 import Home from './pages/HomePage'
-import UsersList, {loadData} from './pages/UsersListPage'
+import UsersList, { loadData } from './pages/UsersListPage'
 
 export default [
   {
-    path: '/',
-    component: Home,
-    exact: true
-  },
-  {
-    loadData,
-    path: '/users',
-    component: UsersList
+    ...App,
+    routes: [
+      {
+        ...Home,
+        path: '/',
+        exact: true
+      },
+      {
+        ...UsersList,
+        path: '/users'
+      }
+    ]
   }
 ]
