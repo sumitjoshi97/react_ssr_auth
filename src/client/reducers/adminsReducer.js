@@ -1,4 +1,4 @@
-import { FETCH_ADMINS } from 'redux'
+import { FETCH_ADMINS } from '../actions'
 
 export default (state = [], action) => {
   switch (action.type) {
