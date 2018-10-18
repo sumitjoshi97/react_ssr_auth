@@ -13,6 +13,8 @@ import { Provider } from 'react-redux'
 // import routes
 import Routes from './Routes'
 
+import reducers from './reducers'
+
 // create axios instance to prepend before every axios call
 const axiosInstance = axios.create({
   baseURL: '/api'
