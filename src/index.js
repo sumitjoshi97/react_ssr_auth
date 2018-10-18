@@ -31,8 +31,15 @@ app.get('*', (req, res) => {
   })
 
   Promise.all(promises).then(() => {
+    const context = {}
+
+    const content = renderer(req, store, context)
+
+    if (context.notFound) {
+      res.status(404)
+    }
     //send req object to renderer
-    res.send(renderer(req, store))
+    res.send(content)
   })
 })
 
