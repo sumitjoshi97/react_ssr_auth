@@ -2,8 +2,8 @@
 import App from './App'
 import Home from './pages/HomePage'
 import UsersList from './pages/UsersListPage'
-import NotFoundpage from './pages/NotFoundPage'
-
+import NotFoundPage from './pages/NotFoundPage'
+import AdminsListPage from './pages/AdminsListPage'
 export default [
   {
     ...App,
@@ -14,11 +14,15 @@ export default [
         exact: true
       },
       {
+        ...AdminsListPage,
+        path: '/admins'
+      },
+      {
         ...UsersList,
         path: '/users'
       },
       {
-        ...NotFoundpage
+        ...NotFoundPage
       }
     ]
   }
