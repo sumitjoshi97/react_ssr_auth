@@ -1,7 +1,8 @@
 // import components
 import App from './App'
 import Home from './pages/HomePage'
-import UsersList, { loadData } from './pages/UsersListPage'
+import UsersList from './pages/UsersListPage'
+import NotFoundpage from './pages/NotFoundPage'
 
 export default [
   {
@@ -15,6 +16,9 @@ export default [
       {
         ...UsersList,
         path: '/users'
+      },
+      {
+        ...NotFoundpage
       }
     ]
   }
